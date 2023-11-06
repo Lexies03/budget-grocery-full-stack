@@ -6,6 +6,7 @@ require("dotenv").config();
 
 //routes
 const groceryRouter = require("./routers/groceries.router");
+const userRouter = require("./routers/users.router");
 
 const app = express();
 const PORT = process.env.PORT || 2222;
@@ -25,6 +26,7 @@ mongoose
   });
 
 app.use("/grocery", groceryRouter);
+app.use("/user", userRouter);
 
 app.listen(PORT, () => {
   console.log("Connected to server");

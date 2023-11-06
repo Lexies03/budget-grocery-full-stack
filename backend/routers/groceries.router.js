@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const groceriesRouter = express.Router();
 
 const {
   getGrocery,
@@ -8,9 +8,9 @@ const {
   updateGrocery,
 } = require("../controllers/groceries.controller");
 
-router.get("/", getGrocery);
-router.post("/", createGrocery);
-router.delete("/:id", deleteGrocery);
-router.put("/:id", updateGrocery);
+groceriesRouter.get("/", getGrocery);
+groceriesRouter.post("/", createGrocery);
+groceriesRouter.delete("/:id", deleteGrocery);
+groceriesRouter.put("/:id", updateGrocery);
 
-module.exports = router;
+module.exports = groceriesRouter;

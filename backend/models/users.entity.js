@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const usersSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     fname: { type: String, required: true },
     lname: { type: String, required: true },
@@ -10,7 +10,11 @@ const usersSchema = new mongoose.Schema(
       type: String,
       default: "User",
     },
-    date: {type: Date, required: true}
+    date: { type: Date, default: Date.now() },
   },
   { timestamps: true }
 );
+
+const UserModel = mongoose.model("users", userSchema);
+
+module.exports = UserModel;
