@@ -4,6 +4,7 @@
   "description": "Buget Grocery App Full Stack",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "jest"
   },
   "author": "Lissa",
